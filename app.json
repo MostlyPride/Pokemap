@@ -7,8 +7,7 @@
     "GOOG_PASSWORD": "my_google_password"
   },
   "addons": [
-    "papertrail",
-    "heroku-postgresql:hobby-dev"
+    "papertrail"
   ],
   "success_url": "/",
   "scripts": {
