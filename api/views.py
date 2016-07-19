@@ -1,8 +1,9 @@
 from django.http import HttpResponse
 import datetime
 import json
-from django.http import HttpResponseRedirect
 import pokelocator_api
+from django.template.response import TemplateResponse
+import os
 
 def json_custom_parser(obj):
     if isinstance(obj, datetime.datetime) or isinstance(obj, datetime.date):
@@ -15,7 +16,8 @@ def json_custom_parser(obj):
 def get_poke(request):
 
     location = request.POST.get('location', "911 Washington Ave, Saint Louis, MO")
-    result = pokelocator_api.main(location=location)
+    direction = request.POST.get('direction', False)
+    result = pokelocator_api.main(location=location, direction=direction)
     
     return HttpResponse(json.dumps({
         "status": "success",
