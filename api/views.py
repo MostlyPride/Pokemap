@@ -3,7 +3,8 @@ import HttpResponse
 import datetime
 import json
 import pokelocator_api
-from django.template.response import TemplateResponse
+from django.template.response 
+import TemplateResponse
 import os
 
 def json_custom_parser(obj):
