@@ -1300,44 +1300,6 @@ _RESPONSEENVELOP_PROFILE_AVATARDETAILS = _descriptor.Descriptor(
   serialized_end=3364,
 )
 
-#test
-_RESPONSEENVELOP_PROFILE_DAILYBONUS = _descriptor.Descriptor(
-  name='DailyBonus',
-  full_name='ResponseEnvelop.Profile.DailyBonus',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='NextCollectTimestampMs', full_name='ResponseEnvelop.Profile.DailyBonus.NextCollectTimestampMs', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='NextDefenderBonusCollectTimestampMs', full_name='ResponseEnvelop.Profile.DailyBonus.NextDefenderBonusCollectTimestampMs', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3405,
-  serialized_end=3494,
-)
-
-
 _RESPONSEENVELOP_PROFILE_CURRENCY = _descriptor.Descriptor(
   name='Currency',
   full_name='ResponseEnvelop.Profile.Currency',
@@ -1431,9 +1393,9 @@ _RESPONSEENVELOP_PROFILE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='daily_bonus', full_name='ResponseEnvelop.Profile.daily_bonus', index=7,
-      number=11, type=11, cpp_type=10, label=1,
-      has_default_value=_b("").decode('utf-8'), default_value=None,
+      name='unknown11', full_name='ResponseEnvelop.Profile.unknown11', index=7,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -1580,8 +1542,6 @@ _RESPONSEENVELOP_WILDPOKEMONPROTO.containing_type = _RESPONSEENVELOP
 _RESPONSEENVELOP_NEARBYPOKEMONPROTO.containing_type = _RESPONSEENVELOP
 _RESPONSEENVELOP_PROFILEPAYLOAD.fields_by_name['profile'].message_type = _RESPONSEENVELOP_PROFILE
 _RESPONSEENVELOP_PROFILEPAYLOAD.containing_type = _RESPONSEENVELOP
-_RESPONSEENVELOP_PROFILE_DAILYBONUS.containing_type = _RESPONSEENVELOP_PROFILE
-_RESPONSEENVELOP_PROFILE.fields_by_name['daily_bonus'].message_type = _RESPONSEENVELOP_PROFILE_DAILYBONUS
 _RESPONSEENVELOP_PROFILE_AVATARDETAILS.containing_type = _RESPONSEENVELOP_PROFILE
 _RESPONSEENVELOP_PROFILE_CURRENCY.containing_type = _RESPONSEENVELOP_PROFILE
 _RESPONSEENVELOP_PROFILE.fields_by_name['avatar'].message_type = _RESPONSEENVELOP_PROFILE_AVATARDETAILS
@@ -1796,13 +1756,6 @@ ResponseEnvelop = _reflection.GeneratedProtocolMessageType('ResponseEnvelop', (_
       # @@protoc_insertion_point(class_scope:ResponseEnvelop.Profile.AvatarDetails)
       ))
     ,
-    
-    DailyBonus = _reflection.GeneratedProtocolMessageType('DailyBonus', (_message.Message,), dict(
-      DESCRIPTOR = _RESPONSEENVELOP_PROFILE_DAILYBONUS,
-      __module__ = 'pokemon_pb2'
-      # @@protoc_insertion_point(class_scope:ResponseEnvelop.Profile.DailyBonus)
-      ))
-    ,
 
     Currency = _reflection.GeneratedProtocolMessageType('Currency', (_message.Message,), dict(
       DESCRIPTOR = _RESPONSEENVELOP_PROFILE_CURRENCY,
@@ -1833,7 +1786,6 @@ _sym_db.RegisterMessage(ResponseEnvelop.WildPokemonProto)
 _sym_db.RegisterMessage(ResponseEnvelop.WildPokemonProto.Pokemon)
 _sym_db.RegisterMessage(ResponseEnvelop.NearbyPokemonProto)
 _sym_db.RegisterMessage(ResponseEnvelop.ProfilePayload)
-_sym_db.RegisterMessage(ResponseEnvelop.Profile.DailyBonus)
 _sym_db.RegisterMessage(ResponseEnvelop.Profile)
 _sym_db.RegisterMessage(ResponseEnvelop.Profile.AvatarDetails)
 _sym_db.RegisterMessage(ResponseEnvelop.Profile.Currency)

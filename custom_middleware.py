@@ -7,3 +7,4 @@ class ForceSSL(object):
             url = request.build_absolute_uri(request.get_full_path())
             secure_url = url.replace("http://", "https://")
             return HttpResponseRedirect(secure_url)
+

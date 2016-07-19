@@ -1,10 +1,8 @@
-from django.http 
-import HttpResponse
+from django.http import HttpResponse
 import datetime
 import json
 import pokelocator_api
-from django.template.response 
-import TemplateResponse
+from django.template.response import TemplateResponse
 import os
 
 def json_custom_parser(obj):
@@ -28,5 +26,7 @@ def get_poke(request):
     
     
 def load_frontend(request):
-    return HttpResponseRedirect("/static/index.html")
+    return TemplateResponse(request, 'index.html', context={
+        "GMAPS_API_KEY": os.environ.get('GMAPS_API_KEY', "Invalid")
+    })
 
